@@ -8,6 +8,12 @@ var server = http.createServer(function (request, response) {
   if(parsedUrl.pathname === '/suma') {
     math_ops.add(parsedUrl.query, response)
   }
+  if(parsedUrl.pathname === '/multiplicacion') {
+    math_ops.mult(parsedUrl.query, response)
+  }
+  if(parsedUrl.pathname === '/fibonacci') {
+    math_ops.fibonacci(parsedUrl.query, response)
+  }
 })
 
 server.listen(8080)
